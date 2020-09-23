@@ -1,0 +1,685 @@
+.clearFix() {
+    *zoom: 1;
+
+    &::after {
+        content: "";
+        display: block;
+        clear  : both;
+    }
+}
+
+// 版心添加背景色和高度
+.wrap {
+    .herder {
+        .top {
+            // 通栏
+            width     : 100%;
+            height    : 30px;
+            background: #eaeaea;
+
+            .topMain {
+                // 版心
+                width : 1200px;
+                height: 100%;
+                margin: 0 auto;
+
+                .left {
+
+                    height     : 100%;
+                    line-height: 30px;
+                    float      : left;
+
+                    h5 {
+                        float      : left;
+                        font-weight: 400;
+                    }
+
+                    p {
+                        line-height: 32px;
+                        float      : right;
+                        padding    : 0 4px;
+
+                        a:nth-of-type(1) {
+                            border-right : 1px solid #b3aeae;
+                            padding-right: 4px;
+                        }
+                    }
+
+                }
+
+                .right {
+                    line-height: 30px;
+                    height     : 100%;
+                    float      : right;
+                    font-size  : 0;
+
+                    a {
+                        font-size: 12px;
+                        padding  : 0 10px;
+
+                        &+a {
+                            border-left: 1px solid #b3aeae;
+                        }
+                    }
+                }
+            }
+        }
+
+        // bottom--头部下log和搜索框部分的布局容器
+        .bottom {
+
+            // bottomMain--版心盒子
+            .bottomMain {
+                width: 1200px;
+
+                margin: 0 auto;
+                .clearFix();
+
+                // log的标签
+                h1 {
+                    margin: 25px 45px;
+                    float : left;
+
+                    img {
+                        width : 175px;
+                        height: 56px;
+                    }
+                }
+
+                // 搜索栏盒子容器--search
+                .search {
+                    float     : right;
+                    margin-top: 35px;
+                    .clearFix();
+
+                    input {
+                        box-sizing: border-box;
+                        width     : 490px;
+                        height    : 32px;
+                        padding   : 0 4px;
+                        border    : 2px solid #ea4a36;
+                        outline   : none;
+                        float     : left;
+                    }
+
+                    button {
+                        width     : 68px;
+                        height    : 32px;
+                        color     : #fff;
+                        border    : none;
+                        background: #ea4a36;
+                        float     : left;
+                    }
+
+                }
+
+            }
+
+
+        }
+    }
+
+    //typeNav-- 商品分类布局容器
+    .typeNav {
+        width        : 100%;
+        border-bottom: 2px solid #e1251b;
+
+        // typeNavMain--商品分类版心盒子
+        .typeNavMain {
+            width : 1200px;
+            margin: 0 auto;
+            .clearFix();
+
+            // h3--全部商品分类#标签
+            h3 {
+                width      : 210px;
+                height     : 50px;
+                line-height: 50px;
+                text-align : center;
+                color      : #fff;
+                float      : left;
+                background : #e1251b;
+            }
+
+            // div--全部商品右侧的导航盒子
+            div {
+                float: left;
+
+                a {
+                    margin     : 0px 22px;
+                    font-size  : 16px;
+                    color      : #333;
+                    line-height: 50px;
+                }
+            }
+
+        }
+    }
+
+    // 商品内容
+    .main {
+        .mainOn {
+            width     : 1200px;
+            margin    : 0 auto;
+            margin-top: 15px;
+
+            .onPoin {
+                padding: 9px 15px 9px 0;
+
+                i {
+                    padding: 0 5px;
+                }
+
+            }
+
+            // 商品展示区域容器
+            .infoWrap {
+                margin: 5px 0 15px;
+                .clearFix();
+
+                // 放大镜
+                .previwWrap {
+                    width: 400px;
+                    float: left;
+
+                    // 放大镜内容区
+                    .previw {
+                        width   : 100%;
+                        height  : 400px;
+                        border  : 1px solid #DFDFDF;
+                        position: relative;
+
+                        // 小图容器
+                        .smallImg {
+                            width : 100%;
+                            height: 100%;
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+
+                        // 蒙版
+                        .mengBan {
+                            width     : 200px;
+                            height    : 200px;
+                            background: rgba(255, 255, 255, 0.5);
+                            border    : 1px solid #ddd;
+                            position  : absolute;
+                            left      : 0;
+                            top       : 0;
+                        }
+
+                        // 
+                        .daTu {
+                            width     : 400px;
+                            height    : 400px;
+                            background: rgba(255, 255, 255, 0.5);
+                            overflow  : hidden;
+                            position  : absolute;
+                            left      : 420px;
+                            top       : 0;
+                            border    : 1px solid #ddd;
+
+                            .bagImg {
+                                width : 800px;
+                                height: 800px;
+                            }
+                        }
+                    }
+
+                    // 缩略图
+                    .thumbanail {
+                        width      : 100%;
+                        padding-top: 5px;
+
+                        >a {
+                            width      : 10px;
+                            height     : 54px;
+                            text-align : center;
+                            line-height: 54px;
+                            border     : 1px solid #ccc;
+                            background : #EBEBEB;
+                        }
+
+                        .prev {
+                            float       : left;
+                            margin-right: 4px;
+                        }
+
+                        .next {
+                            float: right;
+                        }
+
+                        .itemWrap {
+                            width   : 372px;
+                            height  : 56px;
+                            float   : left;
+                            overflow: hidden;
+                            position: relative;
+
+                            .list {
+                                width     : 9999px;
+                                position  : absolute;
+                                left      : 0;
+                                transition: 0.5s;
+
+                                li {
+                                    float       : left;
+                                    width       : 50px;
+                                    height      : 50px;
+                                    border      : 1px solid #ccc;
+                                    padding     : 2px;
+                                    margin-right: 20px;
+
+                                    img {
+                                        width : 100%;
+                                        height: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // 详情区域
+                .info {
+                    float: right;
+                    width: 700px;
+
+                    // 详情区上部分
+                    .infoTop {
+                        h3 {
+                            font-size  : 14px;
+                            line-height: 21px;
+                            margin-top : 15px;
+                        }
+
+                        .ones {
+                            color     : #e12228;
+                            margin-top: 15px;
+                        }
+
+                        .infoContent {
+                            padding    : 7px;
+                            margin-top : 10px;
+                            background : #fee9ec;
+                            line-height: 28px;
+                            .clearFix();
+
+                            >div {
+                                .one {
+                                    margin-right: 15px;
+                                    float       : left;
+                                }
+                            }
+
+                            .top {
+                                .clearFix();
+
+                                .two {
+                                    float: left;
+                                    color: #cc1122;
+
+                                    i {
+                                        font-size: 16px;
+                                    }
+
+                                    em {
+                                        font-size  : 24px;
+                                        font-weight: 700;
+                                    }
+
+                                    span {
+                                        font-size: 12px;
+                                    }
+                                }
+
+                                .three {
+                                    float: right;
+                                }
+                            }
+
+                            .bottom {
+                                margin-top : 10px;
+                                line-height: 28px;
+
+                                >div {
+                                    width: 520px;
+                                    float: left;
+
+                                    i {
+                                        background: #c81623;
+                                        padding   : 3px;
+                                        color     : #fff;
+                                    }
+
+                                    span {
+                                        color      : #999;
+                                        margin-left: 3px;
+                                    }
+                                }
+                            }
+
+                        }
+
+                        .down {
+                            border-bottom : 1px solid #ededed;
+                            padding-bottom: 5px;
+
+                            >div {
+                                margin-top : 10px;
+                                line-height: 28px;
+                                .clearFix();
+
+                                p {
+                                    float: left;
+                                }
+
+                                .one {
+                                    margin-right: 15px;
+                                }
+
+                                .two {
+                                    color: #999;
+                                }
+                            }
+                        }
+                    }
+
+                    // 详情区下部分
+                    .choose {
+                        margin-top : 10px;
+                        line-height: 28px;
+
+                        .choosed {
+                            mark {
+                                background  : snow;
+                                border      : 1px solid #ddd;
+                                padding     : 8px 20px;
+                                margin-right: 20px;
+
+                                a {
+                                    margin-left: 20px;
+                                    color      : red;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+
+                        .chooseOne {
+                            dl {
+                                margin: 13px 0;
+                                .clearFix();
+
+                                dt {
+                                    float       : left;
+                                    margin-right: 15px;
+
+
+                                }
+
+                                dd {
+                                    float        : left;
+                                    margin-right : 5px;
+                                    color        : #666;
+                                    line-height  : 24px;
+                                    padding      : 2px 14px;
+                                    border-left  : 1px solid #eee;
+                                    border-top   : 1px solid #eee;
+                                    border-right : 1px solid #bbb;
+                                    border-bottom: 1px solid #bbb;
+                                    cursor       : pointer;
+
+                                    &:nth-of-type(1) {
+                                        color: red
+                                    }
+                                }
+                            }
+                        }
+
+                        .carWrap {
+                            .clearFix();
+
+                            .control {
+                                width       : 55px;
+                                margin-right: 15px;
+                                position    : relative;
+                                float       : left;
+
+                                input {
+                                    width      : 38px;
+                                    height     : 37px;
+                                    border     : 1px solid #ddd;
+                                    color      : #555;
+                                    text-align : center;
+                                    line-height: 37px;
+                                }
+
+                                .plus {
+                                    width         : 15px;
+                                    height        : 18px;
+                                    line-height   : 18px;
+                                    position      : absolute;
+                                    // right      : -8px;
+                                    top           : 0;
+                                    border        : 1px solid #ddd;
+                                    background    : #f1f1f1;
+                                    text-align    : center;
+                                }
+
+                                .minus {
+                                    width         : 15px;
+                                    height        : 18px;
+                                    line-height   : 18px;
+                                    position      : absolute;
+                                    // right      : -8px;
+                                    top           : 20px;
+                                    border        : 1px solid #ddd;
+                                    border-top    : none;
+                                    background    : #f1f1f1;
+                                    text-align    : center;
+                                }
+                            }
+
+                            .bt {
+                                float      : left;
+                                height     : 36px;
+                                line-height: 36px;
+                                padding    : 0 25px;
+                                font-size  : 16px;
+                                background : #e1251b;
+                                border     : none;
+                                color      : #fff;
+                            }
+                        }
+
+                    }
+
+                }
+            }
+        }
+    }
+
+    // 商品中下部商品TAB    切换
+    .detailWrap {
+        width : 1200px;
+        margin: 30px auto 0;
+        .clearFix();
+
+        // 侧边栏
+        aside {
+            width : 210px;
+            border: 1px solid #ccc;
+            float : left;
+
+            .tabWrap {
+                .clearFix();
+
+                h4 {
+                    float        : left;
+                    width        : 105px;
+                    height       : 40px;
+                    line-height  : 37px;
+                    text-align   : center;
+                    border-top   : 1px solid #fff;
+                    border-bottom: 1px solid #ccc;
+
+                    &.active {
+                        border-top   : 3px solid #e1251b;
+                        border-bottom: 1px solid #fff;
+                    }
+                }
+            }
+
+            .tabContent {
+                padding: 10px;
+
+                >div {
+                    display: none;
+
+                    &.active {
+                        display: block;
+                    }
+
+                    .partList {
+                        .clearFix();
+
+                        li {
+                            float        : left;
+                            width        : 50%;
+                            line-height  : 28px;
+                            border-bottom: 1px dashed #ededed;
+                        }
+                    }
+
+                    .goodsList {
+                        li {
+                            margin       : 5px 0 15px;
+                            border-bottom: 1px solid #ededed;
+
+                            .bImg {
+                                text-align: center;
+
+                                img {
+                                    width: 152px;
+                                }
+                            }
+
+                            .price {
+                                font-size: 16px;
+                                color    : #c81623;
+                            }
+
+                            .gouWuChe {
+                                text-align: center;
+                                margin    : 5px 0;
+
+                                a {
+                                    padding    : 2px 14px;
+                                    line-height: 18px;
+                                    border     : 1px solid #8c8c8c;
+                                    color      : #8c8c8c;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // 详情
+        .detail {
+            float: right;
+            width: 980px;
+
+            // 选择搭配
+            .fitting {
+                border       : 1px solid #ddd;
+                margin-bottom: 15px;
+
+                h4 {
+                    border-bottom: 1px solid #ddd;
+                    background   : #f1f1f1;
+                    padding      : 5px 0 5px 15px;
+                    color        : #333;
+                }
+
+                .goodSuits {
+                    height     : 170px;
+                    padding-top: 10px;
+
+                    .master {
+                        width     : 127px;
+                        height    : 165px;
+                        text-align: center;
+                        position  : relative;
+                        float     : left;
+
+                        img {
+                            width: 87px;
+                        }
+
+                        p {
+                            font-size: 16px;
+                            color    : #c81623;
+                        }
+
+                        i {
+                            position : absolute;
+                            top      : 48px;
+                            right    : -25px;
+                            font-size: 16px;
+                        }
+                    }
+
+                    .suits {
+                        float : left;
+                        width : 668px;
+                        height: 165px;
+
+                        li {
+                            float     : left;
+                            width     : 127px;
+                            margin    : 0 20px;
+                            text-align: center;
+
+                            img {
+                                width : 120px;
+                                height: 130px;
+                            }
+                        }
+                    }
+
+                    .result {
+                        float       : left;
+                        border-left : 1px solid #ddd;
+                        width       : 153px;
+                        height      : 165px;
+                        padding-left: 20px;
+                        >div{
+                            margin: 10px 0;
+                        }
+                        >h5{
+                            font-weight: 700;
+                            margin-bottom: 10px;
+                        }
+                        >p{
+                            color: #B1191A;
+                            font-size: 16px;
+                            margin-bottom: 10px;
+                        }
+                        >button{
+                            padding: 10px 25px;
+                            font-size: 16px;
+                            color: #fff;
+                            background: #e1251b;
+                            border: none;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
